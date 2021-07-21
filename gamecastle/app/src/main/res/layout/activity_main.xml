@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/almendra_sc"
+        android:textSize="25dp"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        android:text="@string/tileCastleVsCastle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:srcCompat="@drawable/castlevscastle" />
+
+    <ImageView
+        android:id="@+id/castleLeft"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        tools:srcCompat="@tools:sample/avatars"/>
+    <ImageView
+        android:id="@+id/castleRight"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/vs"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/castleLeft"
+        app:layout_constraintBottom_toBottomOf="@id/castleLeft"
+        app:srcCompat="@drawable/vs"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/cavalryvsarcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cavalry vs Archer"
+        android:backgroundTint="#00FFC3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/castleLeft"
+        app:layout_constraintBottom_toBottomOf="@id/castleLeft"/>
+    <Button
+        android:id="@+id/mixarmiesvsinfantry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MIX ARMIES vs INFANTRY"
+        android:backgroundTint="#00FFC3"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cavalryvsarcher"
+        app:layout_constraintBottom_toBottomOf="@id/castleLeft"/>
+
+    <TextView
+        android:id="@+id/nameLeft"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        tools:text="PLAYERONE"
+        android:padding="5dp"
+        android:textSize="15dp"
+        android:background="@drawable/player"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/castleLeft"
+        app:layout_constraintStart_toStartOf="@id/castleLeft"
+        app:layout_constraintEnd_toEndOf="@id/castleLeft"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/nameRight"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        tools:text="PLAYERTWO"
+        android:padding="5dp"
+        android:textSize="15dp"
+        android:background="@drawable/player"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/castleRight"
+        app:layout_constraintStart_toStartOf="@id/castleRight"
+        app:layout_constraintEnd_toEndOf="@id/castleRight"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/statLeft"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="12dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/nameLeft"
+        app:layout_constraintStart_toStartOf="@id/castleLeft"
+        app:layout_constraintEnd_toEndOf="@id/castleLeft"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/statRight"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:padding="5dp"
+        android:textSize="12dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/nameRight"
+        app:layout_constraintStart_toStartOf="@id/castleRight"
+        app:layout_constraintEnd_toEndOf="@id/castleRight"
+        />
+
+    <ImageView
+        android:id="@+id/winLeft"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        app:layout_constraintStart_toStartOf="@id/castleLeft"
+        app:layout_constraintEnd_toEndOf="@id/castleLeft"
+        app:layout_constraintTop_toBottomOf="@id/statLeft"
+        app:srcCompat="@drawable/win"
+        android:visibility="gone"/>
+    <ImageView
+        android:id="@+id/winRight"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        app:layout_constraintStart_toStartOf="@id/castleRight"
+        app:layout_constraintEnd_toEndOf="@id/castleRight"
+        app:layout_constraintTop_toBottomOf="@id/statRight"
+        app:srcCompat="@drawable/win"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/asset"
+        android:text="DRAW"
+        android:textColor="#0052F7"
+        android:textSize="35dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/castleRight"
+        app:layout_constraintStart_toEndOf="@id/castleLeft"
+        app:layout_constraintTop_toBottomOf="@id/statRight" />
+
+    <Button
+        android:id="@+id/fightNowBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Fight Now"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="#f71000"
+        android:layout_marginBottom="15dp"
+        android:visibility="gone"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
